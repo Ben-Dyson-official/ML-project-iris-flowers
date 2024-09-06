@@ -31,3 +31,15 @@ print(dataset.describe())
 
 # Look at the class distribution
 print(dataset.groupby('class').size())
+
+# make some box plots
+dataset.plot(kind='box', subplots=True, layout=(2,2), sharex=False, sharey=False)
+plt.show()
+
+# Make some histograms
+dataset.hist()
+plt.show()
+
+# Make some scatter plots
+scatter_matrix(dataset)
+plt.show()
